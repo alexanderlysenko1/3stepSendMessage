@@ -12,11 +12,13 @@ namespace IdentityTest.DAL.EF
     public class ApplicationContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationContext()
-       : base("DBConnection", throwIfV1Schema: false)
+       : base("IdentityDB", throwIfV1Schema: false)
         {
         }
-        public ApplicationContext(string conectionString) : base(conectionString) { }
-
         public DbSet<ClientProfile> ClientProfiles { get; set; }
+        public DbSet<UserMessage> UserMessages { get; set; }
+        public DbSet<AddInfo> AddInfos { get; set; }
+        public DbSet<PhoneRec> PhoneRecs { get; set; }
+        public DbSet<MessageRec> MessageRecs { get; set; }
     }
 }

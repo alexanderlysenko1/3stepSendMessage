@@ -56,30 +56,26 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="EF\ApplicationContext.cs" />
+    <Compile Include="Entities\AddInfo.cs" />
     <Compile Include="Entities\ApplicationRole.cs" />
     <Compile Include="Entities\ApplicationUser.cs" />
     <Compile Include="Entities\ClientProfile.cs" />
+    <Compile Include="Entities\MessageRec.cs" />
+    <Compile Include="Entities\PhoneRec.cs" />
+    <Compile Include="Entities\UserMessage.cs" />
     <Compile Include="Identity\ApplicationRoleManager.cs" />
     <Compile Include="Identity\ApplicationUserManager.cs" />
     <Compile Include="Interfaces\IClientManager.cs" />
     <Compile Include="Interfaces\UnitOfWork.cs" />
-    <Compile Include="Migrations\201902071108117_Initial.cs" />
-    <Compile Include="Migrations\201902071108117_Initial.Designer.cs">
-      <DependentUpon>201902071108117_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ClientManager.cs" />
     <Compile Include="Repositories\IdentityUnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201902071108117_Initial.resx">
-      <DependentUpon>201902071108117_Initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

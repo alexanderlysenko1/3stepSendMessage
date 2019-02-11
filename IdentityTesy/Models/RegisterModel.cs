@@ -6,8 +6,8 @@ using System.Web;
 
 namespace IdentityTesy.Models
 {
-    public class RegisterModel
-    {
+	public class RegisterModel
+	{
         [Required]
         public string Email { get; set; }
         [Required]

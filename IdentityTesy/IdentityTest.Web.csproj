@@ -201,6 +201,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -241,7 +242,9 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -256,7 +259,11 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\SuccessRegister.cshtml" />
+    <Content Include="Views\DisplayEmail.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\DisplayEmail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -294,6 +301,10 @@
     <ProjectReference Include="..\IdentityTest.BLL\IdentityTest.BLL.csproj">
       <Project>{E6A3AFAE-B1A0-4C62-A16D-CEC5DF3001E5}</Project>
       <Name>IdentityTest.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IdentityTest.DAL\IdentityTest.DAL.csproj">
+      <Project>{A1E56DAC-E78C-421E-AA83-C3FB0F418131}</Project>
+      <Name>IdentityTest.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
